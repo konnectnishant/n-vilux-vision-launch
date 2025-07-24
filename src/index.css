@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - minimalist black/white foundation */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    /* Interactive elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary - Deep charcoal for sophistication */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft grays for depth */
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 0%;
+
+    /* Muted - Elegant grays for subtle text */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Premium rose pink gradients */
+    --accent: 330 50% 96%;
+    --accent-foreground: 330 100% 20%;
+
+    /* Rose pink system for gradients and highlights */
+    --rose-light: 330 100% 97%;
+    --rose: 330 100% 88%;
+    --rose-medium: 330 80% 75%;
+    --rose-deep: 330 60% 65%;
+    --rose-dark: 330 40% 45%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 330 60% 65%;
+
+    /* Design tokens */
+    --radius: 0.75rem;
+
+    /* Premium gradients */
+    --gradient-rose: linear-gradient(135deg, hsl(330 100% 95%) 0%, hsl(330 80% 85%) 50%, hsl(330 60% 75%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 10%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-rose: 0 10px 30px -10px hsl(330 60% 65% / 0.3);
+
+    /* Smooth transitions */
+    --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+
+  .dark {
+    /* Dark mode - sophisticated dark theme */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    /* Cards with subtle elevation */
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    /* Interactive elements */
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary system for dark mode */
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Secondary with warm undertones */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Muted for elegant text hierarchy */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent with rose pink warmth */
+    --accent: 330 30% 15%;
+    --accent-foreground: 330 100% 88%;
+
+    /* Enhanced rose system for dark mode */
+    --rose-light: 330 30% 12%;
+    --rose: 330 50% 25%;
+    --rose-medium: 330 60% 35%;
+    --rose-deep: 330 70% 55%;
+    --rose-dark: 330 80% 75%;
+
+    /* Borders and inputs */
+    --border: 0 0% 18%;
+    --input: 0 0% 12%;
+    --ring: 330 70% 55%;
+
+    /* Dark mode gradients */
+    --gradient-rose: linear-gradient(135deg, hsl(330 30% 12%) 0%, hsl(330 40% 18%) 50%, hsl(330 50% 25%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 100%);
+
+    /* Enhanced shadows for dark mode */
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-large: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --shadow-rose: 0 10px 30px -10px hsl(330 70% 55% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  /* Typography system */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom gradient classes */
+  .bg-gradient-rose {
+    background: var(--gradient-rose);
+  }
+
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Text gradients for premium effects */
+  .text-gradient-rose {
+    background: var(--gradient-rose);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .shadow-rose {
+    box-shadow: var(--shadow-rose);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Parallax and animation base */
+  .parallax-element {
+    transition: var(--transition-all);
+  }
+
+  /* Premium button hover effects */
+  .btn-hover-lift {
+    transition: var(--transition-all);
+  }
+
+  .btn-hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+}
+
+/* Animation system */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Stagger animations for children */
+  .stagger-children > * {
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+  }
+}
