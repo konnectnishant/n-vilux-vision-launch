@@ -60,20 +60,35 @@ export function Footer() {
               Connect
             </h4>
             <div className="space-y-3">
-              <a 
-                href="#" 
-                className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"
-                aria-label="Aditya Jain LinkedIn"
+              {/*<a*/}
+              {/*    href="#"*/}
+              {/*    className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"*/}
+              {/*    aria-label="Aditya Jain LinkedIn"*/}
+              {/*>*/}
+              <a
+                  href="https://www.linkedin.com/in/nishant-jain-38748a29/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"
+                  aria-label="Aditya Jain LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"/>
                 <span className="font-body">Aditya Jain</span>
               </a>
-              <a 
-                href="#" 
-                className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"
-                aria-label="Nishant Jain LinkedIn"
+              {/*<a */}
+              {/*  href="#" */}
+              {/*  className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"*/}
+              {/*  aria-label="Nishant Jain LinkedIn"*/}
+              {/*>*/}
+
+              <a
+                  href="https://www.linkedin.com/in/nishant-jain-38748a29/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"
+                  aria-label="Nishant Jain LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"/>
                 <span className="font-body">Nishant Jain</span>
               </a>
             </div>
