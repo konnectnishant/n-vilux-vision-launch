@@ -13,28 +13,60 @@ export function ContactSection() {
   })
   const { toast } = useToast()
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //
+  //   // Basic validation
+  //   if (!formData.name || !formData.email || !formData.message) {
+  //     toast({
+  //       title: "Please fill in all fields",
+  //       description: "All fields are required to submit your pitch.",
+  //       variant: "destructive"
+  //     })
+  //     return
+  //   }
+  //
+  //   // Simulate form submission
+  //   toast({
+  //     title: "Pitch submitted successfully!",
+  //     description: "We'll review your submission and get back to you within 48 hours.",
+  //   })
+  //
+  //   // Reset form
+  //   setFormData({ name: "", email: "", message: "" })
+  // }
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
       toast({
         title: "Please fill in all fields",
         description: "All fields are required to submit your pitch.",
-        variant: "destructive"
-      })
-      return
+        variant: "destructive",
+      });
+      return;
     }
 
-    // Simulate form submission
+    const subject = encodeURIComponent("New Pitch Submission from Vilux Ventures");
+    const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+
+    // Open user's email app
+    window.location.href = `mailto:konnectnishant@gmail.com?subject=${subject}&body=${body}`;
+
+    // Show confirmation toast (non-blocking)
     toast({
-      title: "Pitch submitted successfully!",
-      description: "We'll review your submission and get back to you within 48 hours.",
-    })
+      title: "Opening Email App...",
+      description: "Your pitch draft is ready to send. Please hit 'Send' to complete.",
+    });
 
     // Reset form
-    setFormData({ name: "", email: "", message: "" })
-  }
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
