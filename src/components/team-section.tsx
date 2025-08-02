@@ -7,7 +7,7 @@ const team = [
     name: "Nishant Jain",
     role: "Co-Founder",
     image: NishantImg,
-    bio: "15+ years in Big Tech. Built 0→1 platforms used by 50K+ engineers. Known for driving org-wide innovation.",
+    bio: "Nishant spent over a decade at Apple’s Cupertino HQ, leading teams that built and scaled 0→1 AI-powered platforms used by millions. At Vilux Ventures, he helps founders lay strong tech foundations and craft globally scalable product strategies.",
     quote:
         "We’re not just investing in ideas; we’re investing in the people bold enough to build the future.",
   },
@@ -15,7 +15,7 @@ const team = [
     name: "Aditya Jain",
     role: "Co-Founder",
     image: AdityaImg,
-    bio: "Ex-Investment Banker turned Founder. Merged financial rigor with tech execution. Building for scale and meaning.",
+    bio: "Aditya brings expertise in manufacturing excellence, lean operations, and global supply chains across Southeast Asia, Europe, and the Middle East. At Vilux Ventures, he helps founders scale efficiently through sourcing, process engineering, and cost optimization.",
     quote:
         "We chase clarity, not chaos. Great companies are built with long-term conviction and ruthless focus.",
   },
