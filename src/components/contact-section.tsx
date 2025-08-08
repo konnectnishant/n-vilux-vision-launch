@@ -56,7 +56,7 @@ export function ContactSection() {
     );
 
     // Open user's email app
-    window.location.href = `mailto:konnectnishant@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@viluxventures.com?subject=${subject}&body=${body}`;
 
     // Show confirmation toast (non-blocking)
     toast({
