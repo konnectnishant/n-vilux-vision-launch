@@ -66,7 +66,7 @@ export function Footer() {
               {/*    aria-label="Aditya Jain LinkedIn"*/}
               {/*>*/}
               <a
-                  href="https://www.linkedin.com/in/nishant-jain-38748a29/"
+                  href="https://www.linkedin.com/in/aditya-jain2508/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-rose-dark transition-colors"
