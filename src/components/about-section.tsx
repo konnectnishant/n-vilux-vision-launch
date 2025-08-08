@@ -2,7 +2,7 @@ export function AboutSection() {
   const sections = [
     {
       title: "Who We Are",
-      content: "Vilux Ventures is an early-stage venture capital firm based in India. We invest in Seed and Series A founders building bold, scalable businesses designed to compete—and win—on the global stage."
+      content: "Vilux Ventures is an early-stage venture capital firm based in India. We invest in Seed and Series A founders building bold, scalable businesses designed to compete and win on the global stage."
     },
     {
       title: "More Than Capital", 
@@ -14,7 +14,7 @@ export function AboutSection() {
     },
     {
       title: "Our Mission",
-      content: "We exist to help exceptional founders turn bold ideas into resilient, industry-defining companies. By pairing early belief with practical expertise and long-term partnership, we help build ventures that don't just grow—they endure."
+      content: "We exist to help exceptional founders turn bold ideas into resilient, industry-defining companies. By pairing early belief with practical expertise and long-term partnership, we help build ventures that don't just grow rather they endure."
     }
   ]
 

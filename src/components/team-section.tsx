@@ -75,7 +75,7 @@ export default TeamSection;
 //     {
 //       name: "Nishant Jain",
 //       bio: "Nishant spent over a decade at Apple's Cupertino HQ, leading teams that built and scaled AI-powered systems used by millions worldwide. He helps founders lay strong technology foundations and craft product strategies built for international growth.",
-//       quote: "Innovation isn't about adding more—it's about making the complex simple and the future seamless."
+//       quote: "Innovation isn't about adding more rather it's about making the complex simple and the future seamless."
 //     }
 //   ]
 //
